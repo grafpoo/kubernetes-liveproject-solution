@@ -1,5 +1,6 @@
 resources:
+- namespace.yaml
 - persistence.yaml
-- config.yaml
-- service.yaml
-- database.yaml
+- pg-config.yaml
+- pg-service.yaml
+- pg-deployment.yaml

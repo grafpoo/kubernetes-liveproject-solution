@@ -2,6 +2,7 @@ kind: PersistentVolume
 apiVersion: v1
 metadata:
   name: pg-data
+  namespace: liveproject
 spec:
   storageClassName: standard
   capacity:
@@ -15,6 +16,7 @@ kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
   name: pg-data-claim
+  namespace: liveproject
 spec:
   storageClassName: standard
   accessModes:
