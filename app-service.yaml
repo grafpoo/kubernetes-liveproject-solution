@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: restapi
+  namespace: liveproject
+  labels:
+    app: restapi
+spec:
+  type: NodePort
+  ports:
+   - port: 12080
+     targetPort: 80
+  selector:
+   app: restapi
