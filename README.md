@@ -48,3 +48,11 @@ a5d4bacb0351: Mounted from paketobuildpacks/run
 5153e1acaabc: Mounted from paketobuildpacks/run
 latest: digest: sha256:e78a45c3e68d4dc8fb1471c677c834160b125ac71434eb97c64471a9228ef8f4 size: 4087
 ```
+
+now that we have the image in a registry, we can create the kubernetes yaml. as with the database, we're creating 3 resources - the ConfigMap (to set the environment variable for FOOTIE_DB_HOST, which will point to the service name of the PostgreSQL database; we've cleverly named this _postgres_), the Deployment, where we define the pod we want to run (and, in our solution, set the memory size for the container), and the Service (so we can expose the web application). You can see these in the [GitHub repository solution](https://github.com/grafpoo/kubernetes-liveproject-solution)
+
+then, to load the new resources:
+
+```sh
+kubectl apply -k .
+```
