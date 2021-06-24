@@ -1,4 +1,4 @@
-# kubernetes-postgres-solution
+# kubernetes-liveproject-solution
 
 ## create spring boot image
 
