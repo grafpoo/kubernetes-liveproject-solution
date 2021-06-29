@@ -6,9 +6,8 @@ metadata:
   labels:
     app: restapi
 spec:
-  type: NodePort
   ports:
-   - port: 12080
-     targetPort: 80
+   - port: 80
+     targetPort: 12080
   selector:
    app: restapi
